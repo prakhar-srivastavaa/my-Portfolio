@@ -3,6 +3,7 @@ import '../styles/Recommendations.css';
 
 interface Recommendation {
   text: string;
+  name?: string;
 }
 
 const Recommendations: React.FC = () => {
@@ -24,9 +25,13 @@ const Recommendations: React.FC = () => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const newRecommendationText = formData.get('message') as string;
+    const name = formData.get('name') as string;
     
     if (newRecommendationText && newRecommendationText.trim() !== '') {
-      setRecommendations([...recommendations, { text: newRecommendationText }]);
+      setRecommendations([...recommendations, { 
+        text: newRecommendationText,
+        name: name && name.trim() !== '' ? name : undefined
+      }]);
       setShowPopup(true);
       
       // Reset the form
@@ -45,6 +50,7 @@ const Recommendations: React.FC = () => {
               <span>&#8220;</span>
               {recommendation.text}
               <span>&#8221;</span>
+              {recommendation.name && <div className="recommender-name">- {recommendation.name}</div>}
             </div>
           ))}
         </div>
@@ -60,9 +66,10 @@ const Recommendations: React.FC = () => {
               <textarea 
                 name="message" 
                 id="new_recommendation" 
-                cols={500} 
+                cols={50} 
                 rows={10} 
                 placeholder="Message"
+                required
               ></textarea>
               <div className="flex-center">
                 <button type="submit">Submit</button>

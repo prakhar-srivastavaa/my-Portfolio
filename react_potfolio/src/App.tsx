@@ -5,7 +5,6 @@ import AboutMe from './components/AboutMe'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Recommendations from './components/Recommendations'
-import Contact from './components/Contact'
 import ScrollToTop from './components/ScrollToTop'
 import ResumeButton from './components/ResumeButton'
 
@@ -19,7 +18,6 @@ function App() {
           <Skills />
           <Projects />
           <Recommendations />
-          <Contact />
         </main>
         <ResumeButton />
         <ScrollToTop />

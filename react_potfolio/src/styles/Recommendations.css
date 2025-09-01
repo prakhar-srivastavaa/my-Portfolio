@@ -1,0 +1,104 @@
+.all_recommendations {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.recommendation {
+  font-style: italic;
+  text-align: left;
+  width: 350px;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px rgba(118, 0, 188, 0.2);
+  margin: 10px;
+  border: 1px solid #e0e0e0;
+  font-size: 16px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recommendation:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(118, 0, 188, 0.3);
+}
+
+.recommendation span {
+  color: #7600bc;
+  font-size: 24px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.recommendation span:first-child {
+  margin-right: 5px;
+}
+
+.recommendation span:last-of-type {
+  margin-left: 5px;
+}
+
+.recommender-name {
+  font-style: normal;
+  text-align: right;
+  margin-top: 10px;
+  color: #666;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.popup {
+  width: 400px;
+  background-color: #e8bcf0;
+  border-radius: 12px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  position: fixed;
+  z-index: 1000;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+.popup img {
+  padding-top: 20px;
+  width: 60px;
+  height: auto;
+}
+
+.popup h3 {
+  margin: 15px 0;
+  color: #7600bc;
+}
+
+.popup button {
+  background-color: #fff;
+  border: 1px solid #7600bc;
+  color: #7600bc;
+  display: block;
+  border-radius: 6px;
+  text-align: center;
+  margin: 20px auto;
+  padding: 10px 20px;
+  width: auto;
+  min-width: 120px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.popup button:hover {
+  background-color: #7600bc;
+  color: #fff;
+  border: 1px solid #7600bc;
+}
